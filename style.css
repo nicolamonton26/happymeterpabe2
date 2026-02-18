@@ -1,0 +1,42 @@
+body {
+  font-family: Arial;
+  background: linear-gradient(to right, #38b2ac, #48bb78);
+  text-align: center;
+  padding: 40px;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 350px;
+  margin: auto;
+}
+
+.emoji-display {
+  font-size: 80px;
+  margin: 20px 0;
+}
+
+.emoji-row span {
+  font-size: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+textarea, input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #48bb78;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

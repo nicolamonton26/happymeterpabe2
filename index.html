@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Happiness Meter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>How happy are you at work?</h1>
+
+  <div class="emoji-display" id="bigEmoji">😐</div>
+
+  <div class="emoji-row">
+    <span onclick="setMood('😡')">😡</span>
+    <span onclick="setMood('😢')">😢</span>
+    <span onclick="setMood('😐')">😐</span>
+    <span onclick="setMood('😊')">😊</span>
+    <span onclick="setMood('😍')">😍</span>
+  </div>
+
+  <textarea placeholder="Tell us your feedback..."></textarea>
+  <input type="text" placeholder="Enter your name">
+  
+  <select>
+    <option>Select your department</option>
+    <option>HR</option>
+    <option>Accounting</option>
+    <option>Operations</option>
+    <option>IT</option>
+  </select>
+
+  <button onclick="submitForm()">Submit</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
