@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Employee Happiness Meter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -9,19 +11,18 @@
 <div class="container">
   <h1>How happy are you at work?</h1>
 
-  <div class="emoji-display" id="bigEmoji">😐</div>
-
   <div class="emoji-row">
-    <span onclick="setMood('😡')">😡</span>
-    <span onclick="setMood('😢')">😢</span>
-    <span onclick="setMood('😐')">😐</span>
-    <span onclick="setMood('😊')">😊</span>
-    <span onclick="setMood('😍')">😍</span>
+    <span onclick="setMood(this)">😡</span>
+    <span onclick="setMood(this)">😢</span>
+    <span onclick="setMood(this)">😐</span>
+    <span onclick="setMood(this)">😊</span>
+    <span onclick="setMood(this)">😍</span>
   </div>
 
   <textarea placeholder="Tell us your feedback..."></textarea>
+
   <input type="text" placeholder="Enter your name">
-  
+
   <select>
     <option>Select your department</option>
     <option>HR</option>
@@ -30,9 +31,19 @@
     <option>IT</option>
   </select>
 
-  <button onclick="submitForm()">Submit</button>
+  <div class="btn-group">
+    <button class="btn-submit">Submit</button>
+    <button class="btn-back">Back</button>
+  </div>
 </div>
 
-<script src="script.js"></script>
+<script>
+function setMood(selectedEmoji) {
+  const emojis = document.querySelectorAll(".emoji-row span");
+  emojis.forEach(e => e.classList.remove("selected"));
+  selectedEmoji.classList.add("selected");
+}
+</script>
+
 </body>
 </html>
